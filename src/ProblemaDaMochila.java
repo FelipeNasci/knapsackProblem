@@ -37,11 +37,13 @@ public class ProblemaDaMochila {
 
     public static int[] obterProdutos(int G[][], int peso[]) {
 
-        int escolha[] = new int[G.length];
-        int j = G[0].length - 1;
+        int escolha[] = new int[G.length];	//array de elementos que serao colocados na mochila
+        int j = G[0].length - 1;		    //Mochila na matriz
 
+	    //'i' comeca da ultima linha da matriz G
         for (int i = G.length - 1; i > 0; i--) {
 
+	    //se 
             if (G[i][j] != G[i - 1][j]) {
                 escolha[i] = 1;
                 j -= peso[i];
